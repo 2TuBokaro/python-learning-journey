@@ -1,0 +1,40 @@
+# Web Frameworks
+flask==3.0.3
+django==5.0.8
+fastapi==0.112.0
+uvicorn[standard]==0.30.6
+
+# Data Science & Machine Learning
+numpy==2.1.0
+pandas==2.2.2
+matplotlib==3.9.2
+seaborn==0.13.2
+scikit-learn==1.5.1
+scipy==1.14.0
+
+# Jupyter & Notebooks
+jupyter==1.1.1
+jupyterlab==4.6.2
+ipykernel==7.3.0
+notebook==7.2.1
+
+# Web Scraping & Data Processing
+requests==2.34.2
+beautifulsoup4==4.15.0
+lxml==5.3.0
+selenium==4.23.1
+
+# Database
+sqlalchemy==2.0.32
+psycopg2-binary==2.9.9
+
+# Utilities
+python-dotenv==1.0.1
+pyyaml==6.0.3
+
+# Testing
+pytest==8.3.2
+
+# Additional Data Processing
+openpyxl==3.1.5
+xlrd==2.0.1

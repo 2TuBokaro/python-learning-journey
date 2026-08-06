@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+myenv/
+Myenv/
+22Env/
+.conda/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# PySpark
+metastore_db/
+*.log
+derby.log
+
+# IDE
+.vscode/
+.idea/
+.metadata/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Machine Learning models
+*.pkl
+*.model
+*.h5
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Large files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Keep important project files
+!Dockerfile
+!docker-compose.yml
+!requirements.txt
+!.gitignore
+!README.md

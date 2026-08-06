@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  python-dev:
+    build: .
+    container_name: python-learning-journey
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+      - jupyter-data:/workspace/.jupyter
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  jupyter-data:
+    driver: local

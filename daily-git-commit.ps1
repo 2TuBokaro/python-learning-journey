@@ -1,5 +1,6 @@
 # Daily Git Commit Script for Python Learning Journey
 # This script commits daily changes to Git
+# Account: 2Tu12031978@gmail.com
 
 Write-Host "Starting daily Git commit..." -ForegroundColor Green
 

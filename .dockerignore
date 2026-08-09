@@ -44,6 +44,7 @@ logs/
 README.md
 docs/
 DAILY_WORKFLOW.md
+DEPENDENCY_STABILITY_SETUP.md
 
 # Scripts
 *.ps1
@@ -55,3 +56,15 @@ DAILY_WORKFLOW.md
 Dockerfile
 docker-compose.yml
 .dockerignore
+
+# EXCLUDE LARGE DATA FILES FOR FASTER BUILDS
+*.pkl
+*.model
+*.h5
+*.csv
+*.xlsx
+*.xls
+*.json
+!requirements.txt
+!requirements-minimal.txt
+!.env.example

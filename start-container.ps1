@@ -41,6 +41,8 @@ if ($LASTEXITCODE -eq 0) {
     Start-Process "http://localhost:8888"
     Write-Host "To stop the container, run: docker-compose down in C:\MyJScode" -ForegroundColor Yellow
     Write-Host "If Docker fails, use virtual environment: .\setup-venv.ps1" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "Note: First build may take 10-15 minutes. Subsequent starts are much faster." -ForegroundColor Cyan
 } else {
     Write-Host "Failed to start container. Check the error messages above." -ForegroundColor Red
     Write-Host "Fallback option: Use virtual environment with .\setup-venv.ps1" -ForegroundColor Yellow

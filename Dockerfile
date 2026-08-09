@@ -1,20 +1,19 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 
 # Set working directory
 WORKDIR /workspace
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    git \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements file
-COPY requirements.txt .
+# Copy minimal requirements first (for faster build)
+COPY requirements-minimal.txt .
 
-# Install Python packages with exact versions for stability
-RUN pip install --no-cache-dir -r requirements.txt
+# Install essential Python packages
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements-minimal.txt
 
 # Create non-root user for security
 RUN useradd -m -u 1000 learner && chown -R learner /workspace
@@ -38,4 +37,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8888/ || exit 1
 
 # Set up Jupyter to run from workspace
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--ServerApp.token=''", "--ServerApp.password=''"]

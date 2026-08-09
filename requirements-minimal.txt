@@ -1,0 +1,8 @@
+# Essential packages for learning (compatible versions)
+jupyterlab==4.2.5
+notebook==7.2.1
+ipykernel==7.3.0
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+requests==2.34.2

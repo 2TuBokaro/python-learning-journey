@@ -45,7 +45,7 @@ This guide explains your daily workflow in simple terms. Both your Python projec
 
 **Option A: Use Docker (Recommended)**
 1. Double-click "Python Learning Journey" desktop shortcut
-2. Wait 30-60 seconds for it to start
+2. Wait 10-15 minutes for first build (subsequent starts are much faster)
 3. Jupyter Lab opens automatically in your browser
 4. Start learning!
 

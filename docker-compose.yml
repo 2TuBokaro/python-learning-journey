@@ -9,12 +9,24 @@ services:
     volumes:
       - .:/workspace
       - jupyter-data:/workspace/.jupyter
+      - ./logs:/workspace/logs
     environment:
-      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_ENABLE_LAB=${JUPYTER_ENABLE_LAB:-yes}
+      - PYTHONUNBUFFERED=${PYTHONUNBUFFERED:-1}
     restart: unless-stopped
     stdin_open: true
     tty: true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
 volumes:
   jupyter-data:
     driver: local
+
+networks:
+  default:
+    name: python-learning-network
